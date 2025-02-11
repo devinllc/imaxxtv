@@ -440,7 +440,7 @@ p {
 /* Style for the overall row */
 .row {
     background: #000;
-    width: 50vw;
+    width: 70vw;
 
     display: flex;
     align-items: center;
@@ -456,8 +456,8 @@ p {
 }
 
 .col img {
-    width: 180px; /* Make images responsive */
-    height: 180px; /* Maintain aspect ratio */
+    width: 170px; /* Make images responsive */
+    height: 160px; /* Maintain aspect ratio */
 
 }
 
@@ -480,7 +480,7 @@ p {
     margin-top: 70px;
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 
 /* Left div takes up 50% of the width */
