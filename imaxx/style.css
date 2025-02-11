@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Audiowide"; */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+.navbar .logo a {
+
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar .logo a img {
+
+    width: 180px;
+    margin-left: 50px;
+}
+
+
+.nav-links {
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+    /* background-color: #18cb96; */
+    text-underline-offset: 10;
+    padding: 10px;
+    /* border-radius: 5px; */
+    color: white;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.2; */
+    z-index: 1;
+}
+
+.carousel-text {
+    position: relative;
+    z-index: 2;
+    /* color: #18cb96; */
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.carousel-left {
+    top: 30%;
+    left: 10%;
+    text-align: left;
+    animation-name: slide-in-left;
+}
+
+.carousel-center {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation-name: fade-in;
+}
+
+.carousel-right {
+    top: 30%;
+    right: 10%;
+    text-align: right;
+    animation-name: slide-in-right;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #18cb96;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #1b251c;
+
+}
+
+.carousel-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #18cb96;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background-color: #1b251c;
+    /* border: #18cb96 2px solid; */
+    border-radius: 5px;
+    color: white;
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        overflow: hidden;
+        height: 60vh;
+        /* Reduce height of carousel on tablet and smaller devices */
+
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .carousel-left,
+    .carousel-center,
+    .carousel-right {
+        top: 20%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        overflow: hidden;
+        height: 50vh;
+        /* Reduce height further for smaller screens */
+    }
+
+    .carousel-image {
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-left,
+    .carousel-center,
+    .carousel-right {
+        top: 15%;
+    }
+
+    /* Hide bottom sections on mobile */
+    .carousel-bottom-sections {
+        display: none;
+        height: 0;
+    }
+}
+
+/* .filmss{
+    background-color: black;
+    padding: 20px;
+}
+.filmss ul{
+    display: flex;
+    background-color: #000000;
+    list-style: none;
+
+}
+.filmss img{
+ height: 90px;
+ width: 80%;
+} */
+.filmss {
+    background-color: black;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.filmss ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    animation: slide 30s linear infinite;
+}
+
+/* Hide the second list initially */
+.filmss ul:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.filmss li {
+    margin-right: 10px; /* Space between images */
+}
+
+.filmss img {
+    height: 90px;
+    width: 80%;
+}
+
+/* Keyframes for the sliding animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.buttion {
+    padding-top: 80px;
+
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.diagonal-fill-button {
+    padding: 15px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    /* No background initially */
+    border: 2px solid #03bcff;
+    /* Border only */
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+    /* Text color animation */
+}
+
+.diagonal-fill-button::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 180%;
+    /* Make it wide enough to fill diagonally */
+    height: 600%;
+    /* Make it tall enough to fill diagonally */
+    background-color: #03bcff;
+    transform: rotate(45deg);
+    /* Create diagonal fill */
+    z-index: -1;
+    transition: top 0.5s ease, left 0.5s ease;
+    /* Animate position */
+}
+
+.diagonal-fill-button:hover::before {
+    top: 0;
+    left: 0;
+    /* Completely fill the button */
+}
+
+.diagonal-fill-button:hover {
+    color: #000000;
+    /* Change text color on hover */
+}
+
+
+
+/* divheadings? */
+.headings {
+    background-color: #000000;
+}
+
+.gif-text {
+    font-size: 120px;
+    font-weight: bold;
+    color: transparent;
+    /* Make the text color transparent */
+    text-align: center;
+    background-image: url('assets/S969.gif');
+    /* Replace with the path to your GIF */
+    background-size: cover;
+    /* Make sure the GIF covers the text */
+    background-position: center;
+    /* Center the GIF inside the text */
+    background-clip: text;
+    /* Clip the background image to the text */
+    -webkit-background-clip: text;
+    /* For Safari */
+    padding: 50px;
+}
+
+/* Set up the grid container */
+/* Set up the grid container */
+/* Set up the grid container */
+/* Basic grid styles */
+.vdgrds{
+    background-color: #000;
+}
+.video-grid {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Limit to 4 items per row */
+    gap: 16px;
+    /* Space between items */
+    padding: 16px;
+    max-width: 1200px;
+    /* Optional: control the grid's overall width */
+    margin: 0 auto;
+}
+
+.video-item {
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio */
+}
+
+
+.DIVISION{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Style for the overall grid */
+/* Style for the overall row */
+.row {
+    background: #000;
+    width: 50vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* Ensure space between columns */
+}
+
+/* Style for each column */
+.col {
+    align-items: center;
+    justify-content: center;
+    width: 30%; /* Each column takes up 30% of the width */
+    text-align: center; /* Center-align text and images */
+}
+
+.col img {
+    width: 180px; /* Make images responsive */
+    height: 180px; /* Maintain aspect ratio */
+
+}
+
+.col p {
+    margin-top: 8px; /* Add some space between image and description */
+    font-size: 16px; /* Set font size for the description */
+    color: #ffffff; /* Set text color */
+}
+
+
+
+/* Container that holds both left and right divs */
+.c1{
+    display: flex;
+    background-color: #000;
+    
+    justify-content: center;
+}
+.container {
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Left div takes up 50% of the width */
+.left {
+    width: 50%;
+}
+
+.left img {
+    width: 600px; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Right div also takes up 50% of the width */
+.right {
+    width: 50%;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column; /* Arrange the contents in a column */
+    justify-content: center; /* Center content vertically */
+    padding-left: 20px; /* Optional: Add padding between image and text */
+}
+
+.right h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.right p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.right video {
+    width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+ 
+
+
+/* news */
+/* News container for the 3 items */
+.news {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px; /* Add space between each item */
+}
+
+/* Each item will take 30% of the width */
+.news .item {
+    width: 30%;
+    display: flex;
+    flex-direction: column; /* Arrange the image and paragraph in a column */
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+}
+
+/* Style for images */
+.news .item img {
+    width: 400px; /* Make images responsive */
+    height: 200px; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent images from overflowing */
+}
+
+/* Style for paragraphs */
+.news .item p {
+    margin-top: 8px; /* Add space between image and description */
+    font-size: 16px;
+    color: #ffffff; /* Set text color */
+}
+
+
+.newss{
+    display: flex;
+    background-color: #000;
+    width: 100%;
+    
+    justify-content: center; 
+}
+
+
+/* footewrsss? */
+/* Footer Styling */
+.footer {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 80px 0;
+
+}
+
+/* Top section of the footer */
+/* Footer Styling */
+.footer {
+
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 20px 0;
+}
+
+/* Top section of the footer */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Max width 1200px */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Padding for inner space */
+}
+
+/* Logo section on the left */
+.logo-left img {
+    width: 380px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text section on the right */
+.text-right {
+    display: flex;
+    flex-direction: column; /* Stack the title and subtitle */
+    text-align: left; /* Align text to the left */
+}
+
+.text-right h1 {
+    color: white;
+   
+    margin: 0;
+    font-size: 28px;
+}
+
+.text-right h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff; /* Slightly lighter color for the subtitle */
+}
+/* Divider Styling */
+.divider {
+    border-top: 1px solid #bbb; /* Light gray divider */
+    margin: 20px 0; /* Add space above and below the divider */
+    width: 100%; /* Full width of the container */
+
+}
+
+
+/* Bottom section of the footer */
+.footer-bottom {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+.footersss{
+    background: black;
+}
