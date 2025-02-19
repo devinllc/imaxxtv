@@ -32,5 +32,4 @@ Feel free to explore the repository and contribute to making IMAXX TV the go-to 
 ## Contact
 For more information or collaboration, you can reach out via:
 - **Email:** rameshnda09@gmail.com
-- **LinkedIn:** [Ramesh Vishwakarma]([[https://linkedin.com/in/rameshvishwakarma](https://in.linkedin.com/in/ramesh-vishwakarma-957355234)](https://in.linkedin.com/in/ramesh-vishwakarma-957355234)
 - **LinkedIn:**  https://in.linkedin.com/in/ramesh-vishwakarma-957355234)
