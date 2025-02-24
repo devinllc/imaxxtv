@@ -36,7 +36,7 @@ Currently, I am proud to be part of the **Imaxx** family, leading the developmen
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/devinllc/imaxxtv.git)
 
 
 ### Tech Stack:
