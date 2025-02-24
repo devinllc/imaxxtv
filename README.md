@@ -16,16 +16,34 @@ Currently, I am proud to be part of the **Imaxx** family, leading the developmen
 
 ### Features of the Website:
 - **Homepage**: Introduction to the OTT platform with trending shows and movies.
-- **Subscription Plans**: Detailed information on various plans available.
+- **Plans**: Detailed information on various plans available.
 - **Content Library**: A categorized view of available content (Movies, TV shows, etc.).
 - **Latest Releases**: Showcasing the newest and most popular content.
 - **FAQs & Contact**: A section to help users resolve common queries and reach out for support.
+- Responsive design using HTML and CSS.
+- Google Sheets integration for storing and managing form submissions.
+- **and many more**
+
+
+## Requirements
+
+- Modern web browser (Chrome, Firefox, Edge, etc.).
+- Basic knowledge of HTML, CSS, and JavaScript.
+- Google Sheets API setup for integration.
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+
 
 ### Tech Stack:
-- **Frontend:** HTML5, CSS3, JavaScript (React.js)
-- **Backend:** 
-- **Database:** MongoDB
-- **Hosting:** AWS or Azure
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** Next Js
+- **Database:** Google Sheet
+- **Hosting:** Vercel , Hostnger
 
 Feel free to explore the repository and contribute to making IMAXX TV the go-to OTT platform for everyone!
 
